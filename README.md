@@ -6,7 +6,7 @@ Continuous Control, controlling a double-jointed arm to reach target locations u
 
 The trained agent controlling a double-jointed arm to reach target locations using reinforcement learning.
 
-[![Alt text](https://img.youtube.com/vi/IvAdnRBBOrM/0.jpg)](https://www.youtube.com/watch?v=IvAdnRBBOrM)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/IvAdnRBBOrM/0.jpg)](https://www.youtube.com/watch?v=IvAdnRBBOrM)
 
 # Project Details
 
