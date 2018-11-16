@@ -65,3 +65,30 @@ To set up your python environment to run the code in this repository, follow the
 2. Place the file in the DRLND GitHub repository, in the `continuous-control/` folder, and unzip (or decompress) the file. 
 
 # Instructions
+
+##### Training the agent
+
+```python continuous_control.py```
+
+Output will contain
+
+```
+2018-11-14 22:04:43.691891 Training started
+2018-11-14 22:05:58.591721 Episode 0	Average Score: 0.62
+2018-11-14 22:18:33.173686 Episode 10	Average Score: 8.52
+2018-11-14 22:31:04.626603 Episode 20	Average Score: 26.58
+2018-11-14 22:43:36.006260 Episode 30	Average Score: 19.64
+2018-11-14 22:56:10.468169 Episode 40	Average Score: 22.99
+2018-11-14 23:08:44.066877 Episode 50	Average Score: 21.27
+2018-11-14 23:21:18.404145 Episode 60	Average Score: 19.38
+2018-11-14 23:33:48.686031 Episode 70	Average Score: 20.29
+2018-11-14 23:46:20.157513 Episode 80	Average Score: 20.98
+2018-11-14 23:58:52.266138 Episode 90	Average Score: 27.89
+Problem solved in Episode 97 with an Average Score: 30.37
+Saving agents!!!!
+Trainning Complete
+```
+
+##### To Watch a trained agent
+
+```python run_trained_agent.py```
