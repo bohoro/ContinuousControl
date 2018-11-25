@@ -24,7 +24,20 @@ The team above summarized their work in this way:
 
 ### Plot of Rewards
 
+![Plot of Rewards](https://github.com/bohoro/ContinuousControl/blob/master/plot/Plot.jpeg?raw=true)
 
+Problem solved in Episode 97 with an Average Score: 30.37
+
+The agent is able to receive an average reward (over 100 episodes, and over all 20 agents) of at least +30.
 
 ### Ideas for Future Work
 
+Ideas for future work include:
+
+* Evolving the current work:
+    * Utilizing the recent Distributed Distributional Deterministic Policy Gradients (D4PG) algorithm (https://openreview.net/forum?id=SyZipzbCb) as another method for adapting DDPG for this continuous control problem.
+* Utilizing other algorthm approches such as:
+    * Proximal Policy Optimization Algorithms (https://arxiv.org/pdf/1707.06347.pdf)
+    * Asynchronous Methods for Deep Reinforcement Learning (https://arxiv.org/pdf/1602.01783.pdf)
+    
+    
