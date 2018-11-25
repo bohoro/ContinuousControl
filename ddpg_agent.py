@@ -67,8 +67,6 @@ class Agent:
 
         # Learn, if enough samples are available in memory
         if len(self.memory) > BATCH_SIZE:
-            # experiences = self.memory.sample()
-            # self.learn(experiences, GAMMA)
             self.steps += 1
             if self.steps % 20 == 0:
                 for _ in range(10):
