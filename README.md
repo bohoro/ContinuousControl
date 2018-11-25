@@ -4,15 +4,17 @@ Continuous Control, controlling a double-jointed arm to reach target locations u
 
 ##### Watch the trained agent in action.
 
-The trained agent controlling a double-jointed arm to reach target locations using reinforcement learning.
+The trained agent is controlling a double-jointed arm to reach target locations using reinforcement learning.
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/IvAdnRBBOrM/0.jpg)](https://www.youtube.com/watch?v=IvAdnRBBOrM "Click to Play")
+
+Click the image above to play the video of a trained agent.
 
 # Project Details
 
 In this environment, a double-jointed arm can move to target locations. A reward of +0.1 is provided for each step that the agent's hand is in the goal location. Thus, the goal of your agent is to maintain its position at the target location for as many time steps as possible.
 
-The observation space consists of 33 variables corresponding to position, rotation, velocity, and angular velocities of the arm. Each action is a vector with four numbers, corresponding to torque applicable to two joints. Every entry in the action vector should be a number between -1 and 1.
+The observation space consists of 33 variables corresponding to the position, rotation, velocity, and angular velocities of the arm. Each action is a vector with four numbers, corresponding to torque applicable to two joints. Every entry in the action vector should be a number between -1 and 1.
 
 For this project, I solved the configuration which contains 20 identical agents, each with its own copy of the environment.
 This version is useful for algorithms like PPO, A3C, and D4PG that use multiple (non-interacting, parallel) copies of the same agent to distribute the task of gathering experience.
@@ -86,7 +88,7 @@ Output will contain
 2018-11-14 23:58:52.266138 Episode 90	Average Score: 27.89
 Problem solved in Episode 97 with an Average Score: 30.37
 Saving agents!!!!
-Trainning Complete
+Training Complete
 ```
 
 ##### To Watch a trained agent
