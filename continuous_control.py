@@ -115,4 +115,4 @@ scores = ddpg()
 
 env.close()
 
-print("Trainning Complete")
+print("Training Complete")
