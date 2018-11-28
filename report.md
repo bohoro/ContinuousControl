@@ -22,6 +22,29 @@ The team above summarized their work in this way:
 
 "We adapt the ideas underlying the success of Deep Q-Learning to the continuous action domain. We present an actor-critic, model-free algorithm based on the deterministic policy gradient that can operate over continuous action spaces. Using the same learning algorithm, network architecture and hyper-parameters, our algorithm robustly solves more than 20 simulated physics tasks, including classic problems such as cartpole swing-up, dexterous manipulation, legged locomotion and car driving. Our algorithm is able to find policies whose performance is competitive with those found by a planning algorithm with full access to the dynamics of the domain and its derivatives. We further demonstrate that for many of the tasks the algorithm can learn policies end-to-end: directly from raw pixel inputs."
 
+#### Additional Details About the Learning Algorithm
+
+Here are some additional details of the application of the algorithm to this project.
+* During training the overall simulation is limted to 500 episodes of a maximum of 1000 time steps.  During each step the states, actions, rewards, next_states, and dones are added to a fixed size replay buffer.
+* The project contains both a critic and and actor models.
+    * The actor (policy) network maps states to actions.
+    * The critic (value) network that maps (state, action) pairs to Q-values.
+* In this sense the actor controls our actions and the critic can estimate how well we did.
+* In this project, the weights are updated in the learn function after 20 stpes.  The learn function is called 10 times at this point so we see 10 weight updates (soft update) every 20 steps.
+* Both the actor and critic have regular and target weights, the learn function mixes in the regualr network weights to the target weights. See the call to soft update model parameters using θ_target = τ*θ_local + (1 - τ)*θ_target.  This strategy leads to faster convergence.   
+
+The following hyperparameters were used for the project:
+
+```
+BUFFER_SIZE = int(1e5)  # replay buffer size - orginal was 1e5
+BATCH_SIZE = 256  # minibatch size - orginally was 128
+GAMMA = 0.99  # discount factor
+TAU = 1e-2  # for soft update of target parameters - orgial was 1e-2
+LR_ACTOR = .00017  # learning rate of the actor - orgial was 1e-4
+LR_CRITIC = .0015  # learning rate of the critic - orgial was 1e-2
+WEIGHT_DECAY = 0  # L2 weight decay
+```
+
 ### Plot of Rewards
 
 ![Plot of Rewards](https://github.com/bohoro/ContinuousControl/blob/master/plot/Plot.jpeg?raw=true)
